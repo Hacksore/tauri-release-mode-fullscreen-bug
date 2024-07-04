@@ -1,7 +1,17 @@
-# Tauri + React + Typescript
+# Tauri Fullscreen Always on Top Release Bug
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+### Reproduce (Dev mode)
 
-## Recommended IDE Setup
+In dev mode
+1. clone repo
+1. `pnpm i`
+1. `pnpm tauri dev`
+1. Run any app in fullscreen and all is well
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+### Reproduce (Release)
+
+In dev mode
+1. clone repo
+1. `pnpm i`
+1. `pnpm tauri build`
+1. run the app in `src-tauri/target/release/bundle/macos/release-mode-fullscreen-bug.app`
