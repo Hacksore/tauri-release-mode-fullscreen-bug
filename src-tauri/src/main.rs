@@ -2,6 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use tauri::Manager;
+use window_custom::macos::WindowExtMacos;
 
 mod window_custom;
 
@@ -11,7 +12,7 @@ fn main() {
       let window = app.get_window("main").unwrap();
 
       // we make the window higher than the league client and visible on all workspaces
-      window_custom::macos::WindowExtMacos::set_visisble_on_all_workspaces(&window);
+      window.set_visisble_on_all_workspaces();
 
       Ok(())
     })
